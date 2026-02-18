@@ -1,42 +1,58 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+/* src/App.css */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.5s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.app.alone {
+  background: linear-gradient(to bottom, #1A1A1A, #000000);
+  color: #F5F5F5;
+}
+
+.app.together {
+  background: linear-gradient(to bottom, #F5F5F5, #FFFFFF);
+  color: #000000;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+main {
+  flex: 1;
   padding: 2rem;
-  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+nav button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
 }
 
-.card {
-  padding: 2em;
+nav button:hover {
+  color: #D4AF37;
 }
 
-.read-the-docs {
-  color: #888;
+nav button.active {
+  color: #D4AF37;
+  border-bottom: 2px solid #D4AF37;
+  font-weight: bold;
 }

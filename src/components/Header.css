@@ -1,0 +1,38 @@
+/* src/components/Header.css */ /* Create this file if needed, or inline in App.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2); /* #D4AF37 */
+}
+
+.logo {
+  font-family: 'Baskerville', serif;
+  font-size: 2rem;
+  color: #D4AF37;
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+nav button:hover {
+  color: #D4AF37;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav {
+    margin-top: 1rem;
+  }
+}
