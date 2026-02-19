@@ -7,7 +7,7 @@ const TogetherSection = () => {
       <div className="two-columns">
         <div className="column photo-column">
           <img
-            src="/ksenia-portrait.jpg"
+            src="/kseniisoul.github.io/ksenia-portrait.jpg"
             alt="Психолог Ксения Иванова"
             className="retro-photo"
           />
